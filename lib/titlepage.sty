@@ -1,0 +1,83 @@
+\RequirePackage{graphicx}
+\newcommand{\drawer}{\vspace*{-10pt}}
+
+\newcommand{\dhrule}[3] { % 1, 2 - lines height
+	{
+		\parindent=0pt
+		\rule{\textwidth}{#1}
+		
+		\vspace{\dimexpr-\baselineskip+1mm+#3-1pt}
+		
+		\rule{\textwidth}{#2}
+	}
+}
+
+\newcommand{\schoolfrom}[2] {
+	
+	\begin{center}
+		\textbf{#1}	%School name
+		
+		\textbf{#2}	%Department name
+	\end{center}
+}
+
+\newcommand{\workinfo}[2] {
+	\center{\textbf{#1}}
+	\vspace*{-6pt}
+	\center{#2}
+}
+
+\newcommand{\doctitlepage}[5]{
+	{
+		\thispagestyle{empty}
+		\centering
+
+		\vspace*{-100pt}
+
+		\includegraphics[width=22pt]{additional/fefulogo.pdf}
+
+		{
+			\footnotesize МИНИСТЕРСТВО~НАУКИ~И~ВЫСШЕГО~ОБРАЗОВАНИЯ~РОССИЙСКОЙ~ФЕДЕРАЦИИ
+			
+			\vspace*{-6pt}
+
+			Федеральное государственное автономное образовательное учреждение высшего образования
+		}
+
+		\drawer
+		\textbf{<<Дальневосточный федеральный университет>>}
+		
+		\textbf{(ДВФУ)}
+
+		\vspace*{-6pt}
+		\dhrule{3pt}{1pt}{0pt}
+
+		\vspace*{-20pt}
+
+		#1
+
+		#2
+	
+		\vspace*{6pt}
+
+		#3
+
+		\vspace*{40pt}
+		
+		#4
+
+		\vfill
+		
+
+		\center{
+			\textbf{г. Владивосток}
+		}
+		\center{
+			\textbf{#5}
+		}
+
+		\vspace*{-50pt}
+	
+	}
+	\pagebreak
+}

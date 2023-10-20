@@ -1,0 +1,9 @@
+\newcount\repeatcount
+
+\newcommand{\repeatit}[2]{
+    \repeatcount0
+    \loop\ifnum\repeatcount < #1
+    #2%
+    \advance\repeatcount by 1
+    \repeat 
+}
